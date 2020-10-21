@@ -1,3 +1,37 @@
 {
-  "databaseChangeLog": []
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "1",
+        "author": "tabuckner",
+        "changes": [
+          {
+            "createTable": {
+              "schemaName": "app_schema",
+              "tableName": "todo_items",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "int",
+                    "autoIncrement": true,
+                    "constraints": {
+                      "primaryKey": true,
+                      "nullable": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "description",
+                    "type": "varchar(255)"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
